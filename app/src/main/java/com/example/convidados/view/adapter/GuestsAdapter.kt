@@ -19,13 +19,11 @@ class GuestsAdapter : RecyclerView.Adapter<GuestViewHolder>() {
     private lateinit var listener: OnGuestListener
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GuestViewHolder {
-        countCreate++
         val item = RowGuestBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return GuestViewHolder(item, listener)
     }
 
     override fun onBindViewHolder(holder: GuestViewHolder, position: Int) {
-        countBind++
         holder.bind(guestList[position])
     }
 
